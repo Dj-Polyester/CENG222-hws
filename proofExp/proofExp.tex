@@ -1,0 +1,83 @@
+\documentclass[]{panel}
+
+\usepackage[utf8]{inputenc}
+
+\pagenumbering{gobble}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ left=3cm,
+ top=3.15cm,
+ }
+
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+
+
+\newcommand{\Items}{Name : Batuhan Karaca, ID : 2310191}
+\newcommand{\ItemCount}{2}
+
+\newcommand{\Itemzzz}{The work includes modifications written in LaTex}
+\newcommand{\ItemCounT}{1}
+
+
+\begin{document}
+
+\setPanel{north west}\Items\ItemCount 
+\setPanel{south west}\Itemzzz\ItemCounT
+
+
+\section*{Proof of Memoryless Property of the Exponential Distribution}
+Suppose that an Exponential variable $T$ represents waiting time. Memoryless 
+property means that the fact of having waited for $t$ minutes gets \textit{“forgotten”} ,
+and it does not affect the future waiting time. Regardless of the event $T > t$, 
+when the total waiting time exceeds $t$, the remaining waiting time still has 
+Exponential distribution with the same parameter.
+Mathematically,
+\\ \\
+\begin{tabular}{l l}
+    & $P\{ T>t+x\ |\ T>t \} = P\{ T>x \} $ \\
+\end{tabular}
+\\ \\
+In this formula, $t$ is the already elapsed portion of waiting time, and $x$ is the additional,
+remaining time.
+\\ \\
+\subsection*{PROOF}
+We know that the \textit{pdf} of Exponential Distribution
+\\ \\
+\begin{tabular}{l l}
+    & $f(t) = \lambda e^{-\lambda t}$ \\
+\end{tabular}
+\\ \\
+Then the probability
+\\ \\
+\begin{tabular}{l l l}
+    & $P\{ T>x \} $&$= \int_x^\infty f(t)dt$ \\
+    &&\\
+    &&$ = \int_x^\infty \lambda e^{-\lambda t}dt $ \\
+    &&\\
+    &&$ = lim_{K \rightarrow \infty} \int_x^K \lambda e^{-\lambda t}dt  $ \\
+    &&\\
+    &&$ = lim_{K \rightarrow \infty} [-e^{-\lambda t}]_x^K $ \\
+    &&\\
+    &&$ = lim_{K \rightarrow \infty} (e^{-\lambda x}-e^{-\lambda K} )$ \\
+    &&\\
+    &&$ = e^{-\lambda x}$ \\
+\end{tabular}
+\\ \\
+Using the formula for the conditional probability
+\\ \\
+\begin{tabular}{l l l}
+    & $P\{ T>t+x\ |\ T>t \} $&$= \frac{P\{ T>t+x\ \cap\ T>t \}}{P\{T>t\}}$ \\
+    &&\\
+    &&$ = \frac{P\{ T>t+x \}}{P\{T>t\}} $ \\
+    &&\\
+    &&$ = \frac{e^{-\lambda (t+x)}}{e^{-\lambda t}} $\\
+    &&\\
+    &&$ = e^{-\lambda x}$ \\
+\end{tabular}
+
+
+
+\end{document}
+
