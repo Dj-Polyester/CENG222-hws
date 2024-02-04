@@ -1,0 +1,1 @@
+Take home exams for the course CENG222 - Statistical Methods for Computer Engineering. Each folder has homework pdf explaining the task (given by the instructor) and an implementation done by me (template.tex) and the correponding pdf file.
